@@ -1,13 +1,11 @@
 package ru.ratatoskr.racatalog;
 
-//экземпляры планируем сранивать между собой, поэтому каждый из них должен быть Сравниваемым (Comparable)
 public class User implements Comparable<User> {
     private String id;
     private String firstname;
     private String lastname;
     private int age;
 
-    //опишем для этого алгоритм сравнения
     @Override
     public int compareTo(User o) {
         //из getLastname() вычитаем o.getLastname()
