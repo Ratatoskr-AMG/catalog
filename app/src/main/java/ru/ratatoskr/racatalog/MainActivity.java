@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-//updated
 public class MainActivity extends AppCompatActivity {
 
     public List<User> users = new ArrayList<>();
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         rlist.setLayoutManager(layoutManager);
-        adapter = new MyAdapter(this,R.layout.item,users);
+        adapter = MyAdapter.getInstance(this,R.layout.item,users);
         rlist.setAdapter(adapter);
     }
 

@@ -25,6 +25,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     Context context;
     public List<User> users;
 
+    static MyAdapter getInstance(@NonNull Context context, int resource, List<User> users){
+
+        return new MyAdapter(context,resource,users);
+
+    }
+
     public MyAdapter(@NonNull Context context, int resource, List<User> users) {
         this.users = users;
         this.context = context;
